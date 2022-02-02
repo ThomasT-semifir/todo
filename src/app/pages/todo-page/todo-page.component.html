@@ -1,0 +1,13 @@
+<app-list-todo [todoList]="todoList" (check)="patchTodo($event)" (deleteTodoById)="deleteTodo($event)" (redirectByName)="redirectTo($event)"></app-list-todo>
+
+<p-overlayPanel #op [showTransitionOptions]="'0ms'" [hideTransitionOptions]="'0ms'" [dismissable]="true" [showCloseIcon]="true">
+    <ng-template pTemplate>
+        <app-add-todo (createTodo)="addTodo($event)"  (validate)="op.hide()"></app-add-todo>
+    </ng-template>
+</p-overlayPanel>
+
+<button pButton pRipple label="Ajouter un todo" (click)="op.toggle($event)"></button>
+
+<div *ngIf="showReturnButton">
+    <button pButton pRipple (click)="goBack()" label="Retourner à la liste"></button>
+</div>

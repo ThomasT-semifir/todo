@@ -1,0 +1,9 @@
+<div class="container">
+    <div class="navBar">
+        <p-tabMenu [model]="items"></p-tabMenu>
+    </div>
+</div>
+<div class="hautDroite">
+    <p-colorPicker  [(ngModel)]="color" (onChange)="changeColor()"></p-colorPicker>
+    <button style="height: 1vh" pButton pRipple label="OK" (click)="changeColor()"></button>
+</div>

@@ -1,0 +1,17 @@
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+.hautDroite {
+    position: absolute;
+    top: 1vh;
+    right: 0.5vh;
+    display: flex;
+    flex-direction: column;
+    max-width: fit-content;
+}
+
+.hautDroite p-colorPicker{
+    align-self: center;
+}
